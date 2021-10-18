@@ -3,7 +3,7 @@ from django import template
 from django.http import HttpResponse
 
 def home(request):
-    return render(request, 'templates/index.html')
+    return render(request, 'templates/static_handler.html')
 
 def hello(request):
     return HttpResponse(u'Hello world!')
