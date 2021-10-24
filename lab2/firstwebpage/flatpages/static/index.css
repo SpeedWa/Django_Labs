@@ -1,5 +1,5 @@
 body {
-background: #1abc9c; 
+background: #1aaaaa; 
 font-family: Tahoma, Arial, sans-serif; 
 color: #333; 
 }
@@ -10,7 +10,7 @@ h1 {
 font-family: serif; 
 } 
 p, h4 { 
-font-size: 20px; 
+font-size: 25px; 
 margin-bottom: 0; 
 } 
 h4 { 
@@ -26,6 +26,6 @@ table {
 width: 50%; 
 } 
 img { 
-height: 30px; 
+height: 1000px; 
 width: auto; 
 }
