@@ -1,0 +1,54 @@
+body {
+background: #1abc9c;
+font-family: Tahoma, Arial, sans-serif;
+color: #ffffff
+}
+
+.header_archive img {
+display: block;
+height: 150px; 
+width: auto; 
+margin-left: 43%;
+float: left;
+}
+
+.archive {
+width: 960px;
+margin-left: auto;
+margin-right: auto;
+clear: both;
+}
+
+.header_article img {
+display: block;
+height: 150px; 
+width: auto; 
+margin-left: 25%;
+}
+
+.article {
+width: 960px;
+margin-left: auto;
+margin-right: auto;
+clear: both;
+}
+
+.post-title a {
+color: #ffffff;
+}
+
+.article-author {
+width: 85%;
+float: left;
+}
+
+.article-created-date {
+text-align: right;
+}
+
+.outer_link a {
+margin-right: 25%;
+color: #ffffff;
+float: right;
+clear: right;
+}
