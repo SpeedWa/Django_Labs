@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Архив статей</title>
+    {% load static %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}/static/article.css">
+</head>
+<body class="archive">
+
+<div class="header">
+    <div class="logo">
+        <img src="{{ STATIC_URL }}/static/img/logo.png"/>
+        <img src="{{ STATIC_URL }}/static/img/logo2.png"/>
+    </div>
+    <h1>Django Blog</h1>
+    <a href="/auth/login/">Вход</a>
+    <a href="/auth/register/">Регистрация</a>
+
+    <div class="icons-for-parallax">
+    <img class="icon-for-parallax-first" src="{{ STATIC_URL }}/static/img/1.png">
+    <img class="icon-for-parallax-second" src="{{ STATIC_URL }}/static/img/2.png">
+    <img class="icon-for-parallax-third" src="{{ STATIC_URL }}/static/img/3.png">
+    </div>
+</div>
+
+
+<div>
+    {% for post in posts %}
+        <div class="one-post">
+            <div class="article-title-wrapper">
+                <h2 class="post-title">
+                    <a href="/article/{{ post.id }}">{{ post.title }}</a>
+                </h2>
+                <button class="fold-button">Свернуть</button>
+            </div>
+            <div class="article-info">
+                <div class="article-author">{{ post.author.username }}</div>
+                <div class="article-created-date">{{ post.created_date }}</div>
+            </div>
+            <p class="article-text">{{ post.get_excerpt }}</p>
+            <div class="one-post-shadow"></div>
+        </div>
+    {% endfor %}
+</div>
+
+<script src="{{ STATIC_URL }}/static/js/jquery-3.6.0.min.js"></script>
+<script src="{{ STATIC_URL }}/static/js/helloworld.js"></script>
+<script src="{{ STATIC_URL }}/static/js/fold-post.js"></script>
+<script src="{{ STATIC_URL }}/static/js/highlight-post.js"></script>
+<script src="{{ STATIC_URL }}/static/js/parallax.js"></script>
+</body>
+</html>
